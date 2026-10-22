@@ -213,8 +213,8 @@ header{text-shadow:0 0 6px rgba(255,254,251,.95),0 0 3px rgba(255,254,251,.95)}
 <meta property="og:type" content="website">
 <meta property="og:title" content="河童少年のモイモイモイスチャーライフ">
 <meta property="og:description" content="河童少年・モイ彦が欲しがっている物をあげて、ごきげんを取りながら育成しよう。連作短篇小説「河童少年のモイモイモイスチャー日記」をもとにしたブラウザゲーム。">
-<meta property="og:url" content="https://remarkable-paletas-688898.netlify.app/">
-<meta property="og:image" content="https://remarkable-paletas-688898.netlify.app/ogp.png">
+<meta property="og:url" content="https://kyojitsuspin.github.io/moimoilife/">
+<meta property="og:image" content="https://kyojitsuspin.github.io/moimoilife/ogp.png">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -418,7 +418,7 @@ const RANKS=[[100,'河童の毒親',['河童が欲しい物を次から次へと
 [120,'河童の神親',['基本はやさしく、時には厳しく河童に接するバランスの取れたあなたの愛情表現は、将来に渡って河童との良好な関係を保ち続けるでしょう。','河童を上手く育てるには、いつも濡れているその体を拭きすぎないことなのです。','スキンケア巧者なあなたは、必ずや河童の神親となるでしょう。']],
 [150,'河童のありきたりな親',['河童への愛情があるのか興味が薄いのかわからない、自らの機嫌によってどちらにもなり得るあなたは、河童のありきたりな親であると言えます。','もう少し河童の意見に耳を傾けてほしいところですが、それによって河童の自主性が花開く可能性もなくはないため、こればかりは河童次第と言うほかありません。','河童を育てるのがほとんど運ゲーであることを、河童が大人になってから痛感することでしょう。']],
 [1/0,'河童の天敵',['河童が何を必要としているかがさっぱり理解できないあなたは「河童の天敵」です。','あなたによって禁欲的に育てられた河童は、自分では何も判断できない「指示待ち河童」か、筋力不足によりいつまでたっても泳げない「川流れ河童」になる可能性が高いでしょう。','一方で稀有な例として、ピッコロと孫悟飯のような厳しい師弟関係から飛躍的な成長を遂げるケースも見られます。そうなれば、あなたの心の奥に存在する悪魔的な心持ちも、自然と姿を消していくことでしょう。']]];
-const GAME_URL='https://remarkable-paletas-688898.netlify.app/';
+const GAME_URL='https://kyojitsuspin.github.io/moimoilife/';
 function shareHref(sec,rank){let u=GAME_URL;if(!u){try{u=top.location.href}catch(e){u=location.href}}u=u.split('#')[0];const tm=Math.floor(sec/60)+'分'+sec%60+'秒';return 'https://x.com/intent/tweet?text='+encodeURIComponent('『河童少年のモイモイモイスチャーライフ』をプレイ！ クリアタイム'+tm+'、判定は〈'+rank+'〉でした。')+'&url='+encodeURIComponent(u)+'&hashtags='+encodeURIComponent('モイモイライフ')}
 function clearGame(){SFX.clear();cleared=true;endT=t;joy=100;nextBrk=nextPos=nextGp=nextDlv=1/0;const sec=Math.round(t-startT),r=RANKS.find(x=>sec<=x[0]);
 $('#rs').href=shareHref(sec,r[1]);$('#rt').textContent=`クリア！ タイム ${Math.floor(sec/60)}分${String(sec%60).padStart(2,'0')}秒`;$('#rh').innerHTML='<small>あなたは……</small><span>〈'+r[1]+'〉</span>';$('#rb').innerHTML=r[2].map(p=>`<p>${wb(p)}</p>`).join('');
